@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ARIA Attribute Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table, th, td { border: 1px solid #333; border-collapse: collapse; padding: 0.5em; }
+        .visually-hidden { position: absolute; left: -9999px; }
+        .drag-item { padding: 0.5em; border: 1px dashed #888; margin: 0.2em 0; background: #f9f9f9; }
+    </style>
+</head>
+<body aria-busy="false" aria-label="Demo Page" aria-describedby="page-desc" aria-roledescription="Demo of ARIA attributes">
+    <div id="page-desc" class="visually-hidden">
+        This page demonstrates all ARIA attributes, HTML5 landmarks, headings, a compliant list, table, and form.
+    </div>
+
+    <!-- Banner Landmark -->
+    <header role="banner" aria-label="Site Banner" aria-labelledby="site-title" aria-live="polite">
+        <h1 id="site-title" aria-level="1">ARIA Attribute Demonstration</h1>
+        <nav aria-label="Main Navigation" aria-controls="main-content" aria-current="page">
+            <ul>
+                <li><a href="#main-content" aria-label="Skip to main content">Skip to Main</a></li>
+                <li><a href="#article-section" aria-label="Go to article">Article</a></li>
+                <li><a href="#footer-section" aria-label="Go to footer">Footer</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Landmark -->
+    <main id="main-content" role="main" aria-label="Main Content" aria-describedby="main-desc" aria-atomic="true">
+        <div id="main-desc" class="visually-hidden">
+            Main content area with headings, list, table, and form.
+        </div>
+
+        <!-- Headings 1-6 -->
+        <section aria-label="Headings Demo" aria-labelledby="headings-demo-title">
+            <h2 id="headings-demo-title" aria-level="2">Headings</h2>
+            <h1 aria-level="1">Heading 1</h1>
+            <h2 aria-level="2">Heading 2</h2>
+            <h3 aria-level="3">Heading 3</h3>
+            <h4 aria-level="4">Heading 4</h4>
+            <h5 aria-level="5">Heading 5</h5>
+            <h6 aria-level="6">Heading 6</h6>
+        </section>
+
+        <!-- Article Landmark -->
+        <article id="article-section" role="article" aria-label="Article Section" aria-labelledby="article-title" aria-describedby="article-desc" aria-details="article-details">
+            <h2 id="article-title" aria-level="2">Accessible List and Table</h2>
+            <div id="article-desc" class="visually-hidden">
+                Contains a WCAG/UAAG compliant list and table.
+            </div>
+            <div id="article-details" class="visually-hidden">
+                The list uses proper semantics and the table includes headers and scope.
+            </div>
+
+            <!-- UAAG Compliant List -->
+            <ul aria-label="Fruits List" aria-multiselectable="true" aria-activedescendant="fruit2" aria-setsize="3">
+                <li id="fruit1" aria-posinset="1" aria-selected="false" aria-label="Apple">Apple</li>
+                <li id="fruit2" aria-posinset="2" aria-selected="true" aria-label="Banana">Banana</li>
+                <li id="fruit3" aria-posinset="3" aria-selected="false" aria-label="Cherry">Cherry</li>
+            </ul>
+
+            <!-- UAAG Compliant Table -->
+            <table aria-label="Sample Data Table" aria-rowcount="3" aria-colcount="3" aria-describedby="table-desc" aria-sort="none">
+                <caption id="table-desc">A table showing sample data with ARIA attributes.</caption>
+                <thead>
+                    <tr>
+                        <th scope="col" aria-colindex="1" aria-sort="ascending">Name</th>
+                        <th scope="col" aria-colindex="2">Age</th>
+                        <th scope="col" aria-colindex="3">Role</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr aria-rowindex="2">
+                        <td aria-colindex="1">Alice</td>
+                        <td aria-colindex="2">30</td>
+                        <td aria-colindex="3">Developer</td>
+                    </tr>
+                    <tr aria-rowindex="3">
+                        <td aria-colindex="1">Bob</td>
+                        <td aria-colindex="2">25</td>
+                        <td aria-colindex="3">Designer</td>
+                    </tr>
+                </tbody>
+            </table>
+        </article>
+
+        <!-- Form Landmark -->
+        <section role="form" aria-label="Sample Form" aria-labelledby="form-title" aria-describedby="form-desc" aria-modal="true">
+            <h2 id="form-title" aria-level="2">Accessible Form</h2>
+            <div id="form-desc" class="visually-hidden">
+                This form demonstrates all native controls with proper labels and ARIA attributes.
+            </div>
+            <form aria-labelledby="form-title" aria-describedby="form-desc" aria-errormessage="form-error" aria-invalid="false">
+                <div>
+                    <label for="text-input">Text Input</label>
+                    <input id="text-input" name="text-input" type="text" aria-required="true" aria-placeholder="Enter text" aria-label="Text Input" aria-autocomplete="list">
+                </div>
+                <div>
+                    <label for="password-input">Password</label>
+                    <input id="password-input" name="password-input" type="password" aria-required="true" aria-label="Password Input">
+                </div>
+                <div>
+                    <label for="email-input">Email</label>
+                    <input id="email-input" name="email-input" type="email" aria-label="Email Input">
+                </div>
+                <div>
+                    <label for="number-input">Number</label>
+                    <input id="number-input" name="number-input" type="number" aria-valuemin="1" aria-valuemax="10" aria-valuenow="5" aria-valuetext="Five" aria-label="Number Input">
+                </div>
+                <div>
+                    <label for="range-input">Range</label>
+                    <input id="range-input" name="range-input" type="range" min="0" max="100" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-label="Range Input">
+                </div>
+                <div>
+                    <label for="textarea-input">Textarea</label>
+                    <textarea id="textarea-input" name="textarea-input" aria-multiline="true" aria-placeholder="Type here..." aria-label="Textarea"></textarea>
+                </div>
+                <div>
+                    <label for="select-input">Select</label>
+                    <select id="select-input" name="select-input" aria-required="true" aria-label="Select Input" aria-multiselectable="false">
+                        <option value="">Choose...</option>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                    </select>
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>Checkboxes</legend>
+                        <input id="cb1" type="checkbox" name="cb" value="1" aria-checked="false" aria-label="Checkbox 1">
+                        <label for="cb1">Checkbox 1</label>
+                        <input id="cb2" type="checkbox" name="cb" value="2" aria-checked="true" aria-label="Checkbox 2">
+                        <label for="cb2">Checkbox 2</label>
+                    </fieldset>
+                </div>
+                <div>
+                    <fieldset>
+                        <legend>Radio Buttons</legend>
+                        <input id="rb1" type="radio" name="rb" value="1" aria-checked="false" aria-label="Radio 1">
+                        <label for="rb1">Radio 1</label>
+                        <input id="rb2" type="radio" name="rb" value="2" aria-checked="true" aria-label="Radio 2">
+                        <label for="rb2">Radio 2</label>
+                    </fieldset>
+                </div>
+                <div>
+                    <label for="file-input">File</label>
+                    <input id="file-input" name="file-input" type="file" aria-label="File Input">
+                </div>
+                <div>
+                    <label for="date-input">Date</label>
+                    <input id="date-input" name="date-input" type="date" aria-label="Date Input">
+                </div>
+                <div>
+                    <label for="color-input">Color</label>
+                    <input id="color-input" name="color-input" type="color" aria-label="Color Input">
+                </div>
+                <div>
+                    <button type="submit" aria-pressed="false" aria-label="Submit Button">Submit</button>
+                    <button type="reset" aria-pressed="false" aria-label="Reset Button">Reset</button>
+                </div>
+                <div id="form-error" class="visually-hidden" aria-live="assertive">
+                    <!-- Error messages will appear here -->
+                </div>
+            </form>
+        </section>
+
+        <!-- Live Region Demo -->
+        <section aria-label="Live Region Demo" aria-live="polite" aria-atomic="true" aria-relevant="additions text">
+            <h2 aria-level="2">Live Region Example</h2>
+            <div id="live-region" aria-live="polite" aria-atomic="true">
+                This is a live region. Updates will be announced.
+            </div>
+        </section>
+
+        <!-- Drag and Drop Demo -->
+        <section aria-label="Drag and Drop Demo">
+            <h2 aria-level="2">Drag and Drop Example</h2>
+            <div id="drag-list" aria-dropeffect="move" aria-label="Draggable List" aria-describedby="drag-desc">
+                <div id="drag-desc" class="visually-hidden">Drag items to reorder.</div>
+                <div class="drag-item" draggable="true" aria-grabbed="false" aria-label="Draggable Item 1">Item 1</div>
+                <div class="drag-item" draggable="true" aria-grabbed="true" aria-label="Draggable Item 2">Item 2</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Landmark -->
+    <footer id="footer-section" role="contentinfo" aria-label="Site Footer" aria-labelledby="footer-title" aria-details="footer-details">
+        <h2 id="footer-title" aria-level="2">Footer</h2>
+        <div id="footer-details" class="visually-hidden">
+            This is the footer landmark.
+        </div>
+        <p aria-hidden="false">Copyright &copy; 2024</p>
+    </footer>
+</body>
+</html>
