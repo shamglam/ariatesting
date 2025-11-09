@@ -12,6 +12,8 @@ import FormsPage from './pages/FormsPage';
 // Root route uses App which contains shared layout landmarks and <Outlet /> for children.
 const router = createBrowserRouter([
   {
+      basename: process.env.PUBLIC_URL || '/'
+,
     path: '/',
     element: <App />,
     errorElement: <ErrorPage />,

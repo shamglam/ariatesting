@@ -28,11 +28,11 @@ function App() {
         <nav aria-label="Sekundær navigasjon">
            <p aria-hidden="true">Listen under leses "rekkefølge" sekundær navigasjon landemerke</p>
           <ol>
-            <li><a href="/liveregions" aria-label="Gå til liveregions">Liveregions</a></li>
-            <li><a href="/popover" aria-label="Gå til popover siden">Popover</a></li>
-            <li><a href="/roles" aria-label="Gå til rollesiden">Roller</a></li>
-            <li><a href="/content" aria-label="Gå til innholdssiden">Innhold</a></li>
-                    <li><a href="/therest" aria-label="Resten av greiene">Resten</a></li>
+            <li><a href="liveregions" aria-label="Gå til liveregions">Liveregions</a></li>
+            <li><a href="popover" aria-label="Gå til popover siden">Popover</a></li>
+            <li><a href="roles" aria-label="Gå til rollesiden">Roller</a></li>
+            <li><a href="content" aria-label="Gå til innholdssiden">Innhold</a></li>
+                    <li><a href="therest" aria-label="Resten av greiene">Resten</a></li>
 
           </ol>
         </nav>
