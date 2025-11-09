@@ -90,7 +90,7 @@ export default function TheRestPage () {
 </ul>
 
        <div aria-autocomplete='both' tabIndex={0} aria-busy='true' aria-controls='' aria-expanded="true"
-        aria-haspopup="true" aria-flowto='' >
+        aria-haspopup="true"  >
             et eller annet
             <p aria-hidden="true">kontrollen har autocomplete, aria-busy, aria-expanded, aria-haspopup</p>
             <p aria-hidden="true">Leses: Gruppe, har hurtigmeny</p>
@@ -144,49 +144,81 @@ export default function TheRestPage () {
             <DefinitionRole />
             
             <DialogRole /> 
+
+
+
             <Feed />        
             <Grid />
             <LinkRole />
+
             <ListBox />
             <ListRole />
             <LogRole />
+
+
             <Main />
+
+
             <Marquee />
+
+
             <ProgressBar />
             <Radio />
             <RadioGroup />
             <Region />
             <Scrollbar />
+            
             <Separator />
+
             <Slider />
             <SpinButton />
             <Status />
+
+
             <Suggestion />
+
+
             <SwitchRole />
+
+  <h3 lang="en">Tab List Role Example</h3>
+
             <TabList />
-            <Term />
+
+      <h3 lang="en">Timer Role Example</h3>
             <Timer />
             <Toolbar />
+
+
             <Tooltip />
+            
+            
+            <h3 lang="en">Tree Role Example <span aria-hidden="true">Leses som x av y nivå z, lukket/ikke lukket</span></h3>
             <Tree />
+            
+            <section aria-label="Tree Grid Role Example">
+              <h3 lang="en">Tree Grid Role Example </h3>
+              <span>Leses som tre rutenett - så leses kolonneoverskrifter, inneholder x rader</span>
             <TreeGrid />
-            <TreeItem />
+            </section>
+            
+
+            
         
-            <Widget />
+
+    <h3 lang="en">Meter demo <span aria-hidden="true">leses som 0% måler</span></h3>        
           <Meter />
+        
           <Navigation />
+        
+            <h3 lang="en">Note demo <span aria-hidden="true">leses ikke som noe spesielt</span></h3>        
+
           <Note />
         
+        <h3 lang="en">Presentation demo <span aria-hidden="true">leses ikke som noe spesielt</span></h3>        
           <Presentation />
         </section>
 
 
-       <div aria-autocomplete='both' tabIndex={0} aria-busy='true' aria-controls='' aria-expanded="false"
-        aria-haspopup="true" aria-flowto='' ></div>
-
-
-          <div aria-modal="true" tabIndex={0} role='modal' aria-expanded="false"
-        aria-haspopup="true" aria-flowto='' ></div>
         </div>
     );
 }

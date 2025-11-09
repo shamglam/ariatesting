@@ -4,7 +4,7 @@ import React from 'react';
 // highlighted inline content can be passed through. If no children provided, renders nothing visible.
 export const MarkRole = ({ children }) => (
 	<div role="mark">
-		{children}
+	<p aria-hidden="true">Leses som Fremhevet</p>	{children}
 	</div>
 ); // Non-standard
     

@@ -1,5 +1,5 @@
 import React from 'react';
-export const Tree = () => <ul role="tree" aria-labelledby="tree_label">
+export const Tree = () => <ul  aria-labelledby="tree_label">
   <li role="treeitem" aria-expanded="false" aria-selected="false">
     <span> Projects </span>
     <ul role="group">

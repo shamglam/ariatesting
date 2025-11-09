@@ -1,5 +1,9 @@
 import React from 'react';
-export const Suggestion = () => <div><p>
+export const Suggestion = () => <div>
+  <h3 lang="en">Suggestion Role Example</h3>
+  <p aria-hidden="true">Leses IKKE som forslag</p>
+  
+  <p>
   Freida's pet is a
   <span role="suggestion" aria-details="comment-source">
     <span role="deletion">black Cat called Luna</span>

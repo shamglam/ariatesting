@@ -8,6 +8,7 @@ export const Grid = () =>
     September 2018 -   this is a a thing with a grid role, but merely settting role grid
     doesn't actually provide any navigation capabilities. They must be implemented using 
     java script. 
+    <span aria-hidden="true">Leses som rutenett, og så leses alle kolonneoversikrifter opp</span>
   </caption>
   <thead>
     <tr role="row">

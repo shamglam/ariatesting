@@ -1,3 +1,33 @@
+/* DialogRole component styles */
+.dialog-trigger {
+  background: #004b80;
+  color: #fff;
+  border: 1px solid #003554;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.dialog-trigger:focus-visible {
+  outline: 3px solid #ffbf47;
+  outline-offset: 2px;
+}
+.dialog-surface {
+  border: 2px solid #444;
+  padding: 1rem;
+  max-width: 480px;
+  background: #ffffff;
+  margin-top: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.dialog-document {
+  outline: none;
+  margin-top: 0.5rem;
+}
+.dialog-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
 .App {
   text-align: center;
 }

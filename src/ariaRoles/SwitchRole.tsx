@@ -1,5 +1,7 @@
 import React from 'react';
-export const SwitchRole = () => <div><button
+export const SwitchRole = () => <div>
+  <h3 lang="en">Switch Role Example</h3>
+  <button
   type="button"
   role="switch"
   aria-checked="true"
