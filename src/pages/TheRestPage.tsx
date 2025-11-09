@@ -1,4 +1,3 @@
-import { AlertDialog } from "../ariaRoles/AlertDialog";
 import { ContentInfo } from "../ariaRoles/ContentInfo";
 import { DefinitionRole } from "../ariaRoles/DefinitionRole";
 import { DialogRole } from "../ariaRoles/DialogRole";
@@ -24,7 +23,6 @@ import { Status } from "../ariaRoles/Status";
 import { Suggestion } from "../ariaRoles/Suggestion";
 import { SwitchRole } from "../ariaRoles/SwitchRole";
 import { TabList } from "../ariaRoles/TabList";
-import { Term } from "../ariaRoles/Term";
 import { Alert } from "../ariaRoles/Tested/Alert";
 import { ArticleRole } from "../ariaRoles/Tested/ArticleRole";
 import { Complementary } from "../ariaRoles/Tested/Complementary";
@@ -35,8 +33,6 @@ import { Toolbar } from "../ariaRoles/Toolbar";
 import { Tooltip } from "../ariaRoles/Tooltip";
 import { Tree } from "../ariaRoles/Tree";
 import { TreeGrid } from "../ariaRoles/TreeGrid";
-import { TreeItem } from "../ariaRoles/TreeItem";
-import { Widget } from "../ariaRoles/Widget";
 
 
 export default function TheRestPage () {
@@ -131,7 +127,6 @@ export default function TheRestPage () {
         <section aria-label="ARIA-rollekontroller">
             <Alert />
         
-            <AlertDialog />
             
             <ArticleRole />
             

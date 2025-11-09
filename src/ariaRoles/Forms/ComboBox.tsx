@@ -1,5 +1,5 @@
 import React from 'react';
-export const ComboBox = () => <div class="combo-wrap">
+export const ComboBox = () => <div className="combo-wrap">
   <input
     type="text"
     id="jokes"
@@ -11,10 +11,10 @@ export const ComboBox = () => <div class="combo-wrap">
     aria-activedescendant="" />
   <span aria-hidden="true" data-trigger="multiselect"></span>
   <ul id="joketypes" role="listbox" aria-label="Jokes">
-    <li class="active" role="option" id="item1">Puns</li>
-    <li class="option" role="option" id="item2">Riddles</li>
-    <li class="option" role="option" id="item3">Observations</li>
-    <li class="option" role="option" id="item4">Knock-knock</li>
-    <li class="option" role="option" id="item5">One liners</li>
+    <li className="active" role="option" aria-selected="false" id="item1">Puns</li>
+    <li className="option" role="option" aria-selected="false" id="item2">Riddles</li>
+    <li className="option" role="option" aria-selected="false" id="item3">Observations</li>
+    <li className="option" role="option" aria-selected="false" id="item4">Knock-knock</li>
+    <li className="option" role="option" aria-selected="false" id="item5">One liners</li>
   </ul>
 </div>;
