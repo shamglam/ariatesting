@@ -22,7 +22,7 @@ export const Grid = () =>
       <th role="columnheader" aria-label="Saturday">S</th>
     </tr>
   </thead>
-  <tbody role="rowgroup">
+  <tbody>
     <tr role="row">
       <th scope="row" role="rowheader">Week 1</th>
       <td>26</td>
